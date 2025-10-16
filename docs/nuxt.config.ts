@@ -3,9 +3,14 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/plausible', '@nuxtjs/i18n'],
   css: ['~/assets/css/main.css'],
   site: {
-    name: 'Docus',
+    name: 'KG6-Codex',
   },
   compatibilityDate: '2025-07-18',
+  nitro: {
+    prerender: {
+      routes: ['/']
+    }
+  },
   i18n: {
     defaultLocale: 'en',
     locales: [{
@@ -14,12 +19,12 @@ export default defineNuxtConfig({
     }],
   },
   llms: {
-    domain: 'https://docus.dev',
-    title: 'Docus',
-    description: 'Write beautiful docs with Markdown.',
+    domain: 'https://kg6-codex.vercel.app',
+    title: 'KG6-Codex',
+    description: 'Create beautiful docs with Markdown & Vue components.',
     full: {
-      title: 'Docus',
-      description: 'Write beautiful docs with Markdown.',
+      title: 'KG6-Codex',
+      description: 'Create beautiful docs with Markdown & Vue components.',
     },
   },
 })

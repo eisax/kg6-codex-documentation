@@ -11,7 +11,9 @@
   "scripts": {
     "dev": "pnpm run docs:dev",
     "docs:dev": "cd docs && nuxt dev --extends ../layer",
-    "docs:build": "nuxt build docs --extends ../layer",
+    "docs:build": "nuxt prepare layer && nuxt build docs --extends ../layer",
+    "build": "pnpm run docs:build",
+    "start": "cd docs && node .output/server/index.mjs",
     "dev:prepare": "nuxt prepare layer && nuxt prepare docs --extends ../layer",
     "lint": "eslint .",
     "typecheck": "nuxt typecheck layer",

@@ -140,6 +140,49 @@ For detailed documentation on customizing your KG6-Codex project, visit the docu
 
 We welcome contributions! Please see our contributing guidelines and feel free to submit issues and pull requests.
 
+## Deployment
+
+### Deploy to Vercel
+
+This project is configured for easy deployment to Vercel:
+
+1. **Push your code to GitHub:**
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
+
+2. **Connect to Vercel:**
+   - Go to [vercel.com](https://vercel.com)
+   - Sign in with your GitHub account
+   - Click "New Project"
+   - Import your repository
+   - Vercel will automatically detect the Nuxt configuration
+
+3. **Deploy:**
+   - Vercel will automatically build and deploy your documentation
+   - Your site will be available at `https://your-project-name.vercel.app`
+
+### Manual Deployment
+
+You can also deploy manually:
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+
+# For production deployment
+vercel --prod
+```
+
+### Environment Variables
+
+If you need to set any environment variables, add them in your Vercel dashboard under Project Settings > Environment Variables.
+
 ## License
 
 Published under the [MIT](LICENSE) license.
